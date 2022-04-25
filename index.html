@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!--  -->
+</head>
+
+<body>
+    <header>
+        <h1>地球不爆炸 我们不放假</h1>
+        <div class="showTime"></div>
+    </header>
+
+    <section class="mainbox">
+        <div class="column">
+            <div class="panel bar">
+                <h2>柱状图-就业行业</h2>
+                <div class="chart">
+
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line">
+                <h2>折线图图-人员变化</h2>
+                <div class="chart">
+                    <button type="link" href='www.baidu.com' target="_blank">查看详情</button>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie">
+                <h2>饼形图-年龄分布</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li>123456</li>
+                        <li>223232</li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li>前端需求人数</li>
+                        <li>市场供应人数</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 地图模块 -->
+            <div class="mpp">
+                <div class="map1"></div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+                <div class="chart"></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="panel bar">
+                <h2>柱状图-技能掌握</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line">
+                <h2>折线图-播放量</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie">
+                <h2>饼形图-地区分布</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="js/fiexible.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+    var t = null;
+    t = setTimeout(time, 1000)
+
+    function time() {
+        clearTimeout(t);
+        dt = new Date();
+        var y = dt.getFullYear();
+        var mt = dt.getMonth() + 1;
+        var day = dt.getDate();
+        var h = dt.getHours();
+        var m = dt.getMinutes();
+        var s = dt.getSeconds();
+        document.querySelector(".showTime").innerHTML = "宇宙时间：" + y + "年" + mt + "月" + day + "日" + h + "时" + m + "分" + s + "秒"
+        t = setTimeout(time, 1000)
+    }
+</script>
+
+</html>
